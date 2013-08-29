@@ -40,3 +40,12 @@ class Cat(BaseModel):
                      nullable=False,
                      default=new_cat_name,
                      unique=True)
+
+
+class Todo(BaseModel):
+    __tablename__ = "todo"
+
+    #: Unique cat ID
+    title = db.Column(db.String, primary_key=True)
+    order = db.Column(db.Integer)
+    done = db.Column(db.Boolean)

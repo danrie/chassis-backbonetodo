@@ -1,58 +1,16 @@
-Chassis
-======
+This is a demo app coded in 10 minutes during the August 28 Boston Python
+meetup, as part of my presentation on
+[flask-chassis](https://github.com/SawdustSoftware/flask-chassis).
 
-Chassis is a "batteries included" boilerplate flask project to use as a quick
-starting point, especially for REST services.
+This takes the [backbone.js example todo
+app](backbonejs.org/examples/todos/index.html) and builds a quick and dirty
+flask backend for it, using chassis as a starting point.
 
-Features
---------
+This is an example to show you how quickly you can get up and running with
+flask and chassis, and the code is exactly what I coded up live, unedited. It
+is decidedly NOT a paragon of best practices to follow in production code,
+although it's not terrible either.
 
-* Clean and simple app factory model
-* Self-bootstrapping virtualenv
-* Separate requirements for dev and production, one pinned and the other
-  unpinned
-* Smart Makefile for common tasks
-* Error tracking with Sentry/raven
-* REST-y views with Flask-restful
-* Flask-Cache
-* Flask-DebugToolbar
-* Werkzeug Profiler Middleware
-* Flask-Script ./manage.py with shell already set
-* Flask-SQLAlchemy
-* Tests with unittest, nose, coverage.py
-* Factories with factory\_boy and faker
-* Sphinx docs with flask-style theme
-* sphinxcontrib-httpdomain for REST docs
-
-Usage
------
-
-Run `make dev` to run the dev server. It'll install all the dependencies if it
-has to.
-
-For production, you're looking for runserver.py. The `app` variable has what
-you want. Alternatively, the `create_app` factory could also be used.
-
-
-<table>
-<tr><th>Command</th><th> What it does </th></tr>
-<tr><td>`make dev` </td><td> Run the flask test server in debug mode. </td></tr>
-<tr><td>`make test` </td><td> run nosetests with coverage</td></tr>
-<tr><td>`make dummy` </td><td> Generates some dummy data and dumps ids.</td></tr>
-<tr><td>`make shell` </td><td> run an ipython shell where you can play around with objects. The variables `app`, `db` and `models` come preloaded.</td></tr>
-<tr><td>`make docs` </td><td> Builds pretty docs and pops open a browser window</td></tr>
-<tr><td>`make clean` </td><td> Clean up all the generated gunk</td></tr>
-</table>
-
-Configuration
--------------
-
-The `/conf/` directory contains configuration files. `dev.py` is included by
-default. You pass the `CHASSIS_CONFIG="path/to/config.py"` environment variable
-to pick a settings file. It's this way to make sure no one accidentally loads
-the dev config in production.
-
-Changelog
----------
-
-* Nothing here yet until release.
+You can see the [slides](http://akmanalp.com/chassis_presentation/) and the
+[video of the
+presentation](http://www.youtube.com/watch?v=Br4NLY2rGs0&list=UUZaXkyk7MOwF-25_VAdnfnQ&feature=player_detailpage#t=3211).

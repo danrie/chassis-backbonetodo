@@ -22,3 +22,13 @@ class Cat(SQLAlchemyModelFactory):
     born_at = factory.LazyAttribute(lambda x: faker.unixTime())
 
     name = factory.LazyAttribute(lambda x: faker.firstName())
+
+
+class Todo(SQLAlchemyModelFactory):
+    FACTORY_FOR = models.Todo
+    FACTORY_SESSION = db.session
+
+    title = factory.LazyAttribute(lambda x: faker.bs())
+    order = factory.Sequence(lambda x: x)
+    done = factory.Sequence(lambda x: faker.boolean())
+

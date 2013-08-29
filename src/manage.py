@@ -20,8 +20,8 @@ def dummy(n=10):
 
     ids = []
     for x in xrange(0, int(n)):
-        m = factories.Cat()
-        ids.append(m.id)
+        m = factories.Todo()
+        ids.append(m.title)
     models.db.session.commit()
 
     print "Inserted these ids:"

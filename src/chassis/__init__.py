@@ -4,7 +4,7 @@ from raven.contrib.flask import Sentry
 from flask_debugtoolbar import DebugToolbarExtension
 from werkzeug.contrib.profiler import ProfilerMiddleware
 
-from chassis.views import CatAPI
+from chassis.views import CatAPI, show_todos, TodoListAPI
 from chassis.views import api, cache
 from chassis.models import db
 
@@ -24,6 +24,9 @@ def create_app(config={}):
 
     #API Endpoints
     api.add_resource(CatAPI, "/cats/<int:cat_id>")
+    api.add_resource(TodoListAPI, "/todos")
+
+    app.add_url_rule("/", view_func=show_todos)
 
     with app.app_context():
         db.create_all()
