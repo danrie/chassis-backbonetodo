@@ -14,3 +14,6 @@ although it's not terrible either.
 You can see the [slides](http://akmanalp.com/chassis_presentation/) and the
 [video of the
 presentation](http://www.youtube.com/watch?v=Br4NLY2rGs0&list=UUZaXkyk7MOwF-25_VAdnfnQ&feature=player_detailpage#t=3211).
+
+The juicy bits of the code are in `src/chassis/`, especially views.py,
+models.py, factories.py.
